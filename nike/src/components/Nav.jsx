@@ -1,13 +1,26 @@
-
+import logo from "../../public/vite.svg";
+import { navLinks } from "../constants";
 
 const Nav = () => {
   return (
-    <header>
-        <nav>
-            <a href="/">
-                <img src="" alt="Logo"/>
-            </a>
-        </nav>
+    <header className="padding-x py-8 absolute z-10 w-full">
+      <nav className="flex justify-between items-center max-container">
+        <a href="/">
+          <img src={logo} alt="Logo" />
+        </a>
+        <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
+          {
+            navLinks.map((item)=>(
+              <li key={item.label}>
+                <a href="item.href" className="font-montserrat leading-normal text-lg text-slate-gray">{item.label}</a>
+              </li>
+            ))
+          }
+        </ul>
+        <div className="hidden max-lg:block">
+          <img src={logo} alt="Hamburger" width={25} height={25}/>
+        </div>
+      </nav>
     </header>
   )
 }
