@@ -4,8 +4,8 @@ import logo from "../../public/vite.svg";
 const SpecialOffer = () => {
   return (
     <section className="flex justify-wrap items-center max-xl:flex-col-reverse gap-10 max-container">
-      <div className="flex-1">
-        <img src={logo} width={773} height={687} className="object-contain w-full" />
+      <div className="flex flex-1 justify-center items-center">
+        <img src={logo} alt="shoe" width={500} height={300} className="object-contain"/>
       </div>
       <div className="flex flex-col flex-1">
         <h2 className="font-palanquin text-4xl capitalize font-bold lg:max-w-lg">
